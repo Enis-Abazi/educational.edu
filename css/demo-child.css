@@ -1,0 +1,553 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: "Robot Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Robot Medium";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Robot Black";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Robot Italic";
+    src: url(../fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Robot Thin";
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+.left-nav {
+    height: 100vh;
+    position: fixed;
+    width: 300px;
+    overflow-y: scroll;
+    float: left;
+    background-color: rgb(247, 107, 182);
+    text-align: center;
+}
+
+.left-nav img {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(249, 199, 107);
+    border-radius: 50%;
+}
+
+.left-nav ul {
+    display: block;
+    text-align: center;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.left-nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: "Robot Italic";
+    border: 1px solid transparent;
+    color: white;
+}
+
+.left-nav ul i {
+    font-size: 30px;
+    color: rgb(255, 204, 0);
+    margin: 10px;
+}
+
+.left-nav ul li:hover {
+    background: rgb(41, 39, 39);
+    color: rgb(235, 235, 235);
+    transition: 0.2s all linear;
+}
+
+.right-nav {
+    margin-left: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: rgb(247, 107, 182);
+}
+
+.right-nav select {
+    float: right;
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-family: "Robot Thin";
+    color: black;
+    border: 2px solid black;
+}
+
+.right-nav input {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Robot Thin:";
+    font-size: 20px;
+    color: black;
+    background: #f3f3fa;
+}
+
+.right-nav .colored-nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 200px;
+    padding: 10px;
+    font-size: 25px;
+    font-family: "Robot Italic";
+    color: white;
+}
+
+.right-nav .colored-nav li {
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.right-nav .colored-nav li:hover {
+    color: rgb(156, 255, 156);
+    transition: 0.4s all linear;
+    border-bottom: 2px solid rgb(156, 255, 156);
+}
+
+h1 {
+    font-size: 35px;
+    font-family: "Robot Bold";
+    color: black;
+    text-align: center;
+    padding: 25px;
+}
+
+.middle {
+    color: black;
+    font-family: "Robot Bold";
+    text-align: center;
+    padding: 25px;
+}
+
+.mainSection {
+    padding-top: 50px;
+    padding-left: 450px;
+    padding-right: 300px;
+}
+
+.mainSection .subjects {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 50px;
+    padding-top: 50px;
+}
+
+.mainSection .subjects .col {
+    flex-basis: 25%;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #f3f3fa;
+    border-radius: 20px;
+}
+
+.mainSection .col i {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mainSection .col .fa-user-large {
+    color: rgb(151, 247, 151);
+}
+
+.mainSection .col .fa-people-group {
+    color: rgb(87, 182, 255);
+}
+
+.mainSection .col .fa-user-group {
+    color: rgb(255, 237, 71);
+}
+
+.mainSection .col .fa-money-bill {
+    color: rgb(253, 87, 21);
+}
+
+.mainSection .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 50px;
+    column-gap: 50px;
+}
+
+.mainSection .row .col {
+    flex-basis: 50%;
+    border: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.mainSection .row img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.mainSection .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: "Robot Thin";
+}
+
+.mainSection .flex li {
+    margin: 5px;
+}
+
+.left {
+    float: left;
+    border-top: 3px solid rgb(91, 184, 255);
+    width: max-content;
+    font-size: 16px;
+    font-family: "Robot Bold";
+}
+
+.right {
+    float: right;
+    border-top: 3px solid rgb(185, 70, 247);
+    width: max-content;
+    font-size: 16px;
+    font-family: "Robot Bold";
+}
+
+progress {
+    width: 100%;
+    font-size: 25px;
+}
+
+.row .dark {
+    color: black;
+    font-family: "Robot Bold";
+    font-size: 25px;
+}
+
+.mainSection .row .traffic {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: "Robot Italic";
+    align-items: center;
+}
+
+.mainSection .row .traffic li {
+    margin: 10px;
+    align-items: center;
+}
+
+.red-nav,
+.green-nav,
+.orange-nav,
+.blue-nav {
+    list-style-type: disc;
+    font-size: 18px;
+    font-family: "Robot Medium";
+}
+
+.red-nav {
+    color: rgb(255, 40, 40);
+}
+
+.green-nav {
+    color: rgb(96, 255, 96);
+}
+
+.orange-nav {
+    color: rgb(255, 144, 40);
+}
+
+.blue-nav {
+    color: rgb(76, 189, 255);
+}
+
+.green-p,
+.yellow-p,
+.pink-p {
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 7px;
+    font-family: "Robot Bold";
+    color: white;
+    width: max-content;
+}
+
+.green-p {
+    background: rgb(88, 248, 88);
+}
+
+.yellow-p {
+    background: rgb(238, 238, 76);
+}
+
+.pink-p {
+    background: rgb(249, 66, 154);
+}
+
+.row h5 {
+    font-family: "Robot Thin";
+    color: rgb(109, 109, 109);
+}
+
+.mainSection .contact {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 50px;
+    padding-top: 50px;
+}
+
+.mainSection .contact .col {
+    flex-basis: 25%;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #f3f3fa;
+    border-radius: 20px;
+}
+
+.mainSection .contact .col:nth-child(1) {
+    background: #5c5cc5;
+    color: white;
+    font-family: "Robot Italic";
+}
+
+.mainSection .contact .col:nth-child(2) {
+    background-color: blue;
+    color: white;
+    font-family: "Robot Italic";
+}
+
+.mainSection .contact .col:nth-child(3) {
+    background-color: rgb(252, 77, 77);
+    color: white;
+    font-family: "Robot Italic";
+}
+
+.mainSection .contact .col:nth-child(4) {
+    background-color: rgb(52, 52, 133);
+    color: white;
+    font-family: "Robot Italic";
+}
+
+.fa-twitter {
+    color: white;
+    font-size: 20px;
+}
+
+.fa-google-plus-g {
+    color: white;
+    font-size: 20px;
+}
+
+.fa-linkedin {
+    color: white;
+    font-size: 20px;
+}
+
+.mainSection .fa-facebook-f {
+    color: white;
+    font-size: 20px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-left: 450px;
+    padding-right: 300px;
+    padding-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 20px;
+    font-family: "Robot Thin";
+    text-align: start;
+    padding-left: 10px;
+    color: black;
+}
+
+span {
+    color: rgb(51, 51, 51);
+    font-family: "Robot Bold";
+    font-size: 22px;
+}
+
+.nav {
+    width: 300px;
+    background: #f2eef9;
+    margin: 40px auto;
+}
+
+.profile {
+    padding: 30px;
+    background: rgb(247, 107, 182);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: "Robot Italic";
+}
+
+.profile:after {
+    content: " +";
+    float: right;
+    right: 10%;
+}
+
+.slide {
+    clear: both;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: end;
+    transition: height .4s ease;
+}
+
+.slide li {
+    padding: 30px;
+}
+
+.slide li a {
+    color: rgb(247, 107, 182);
+    font-size: 20px;
+    font-family: "Robot Italic";
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+
+#touch:checked+.slide {
+    height: 350px;
+}
+
+@media only screen and (max-width:1000px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .left-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        position: static;
+        overflow-y: scroll;
+    }
+    .right-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .right-nav input {
+        text-align: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .right-nav select {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .mainSection {
+        padding: 0;
+        margin: 0;
+    }
+    .mainSection .subjects {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .mainSection .row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .mainSection .contact {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    footer {
+        padding: 0;
+    }
+    footer h3 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1500px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    h1 {
+        font-size: 25px;
+        text-align: end;
+    }
+    .middle {
+        font-size: 17px;
+        text-align: end;
+        animation: none;
+    }
+}

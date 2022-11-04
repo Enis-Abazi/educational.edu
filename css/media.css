@@ -1,0 +1,633 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+@font-face {
+    font-family: "Robot Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Robot Light";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Robot Medium";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Robot Black";
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+
+/* This is Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+header ul li {
+    margin: 15px;
+    font-size: 25px;
+    font-family: "Robot Medium";
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid rgb(199, 196, 196);
+    color: black;
+}
+
+header ul li:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: 0.5s ease-out all;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    border-radius: 80px;
+    background-color: #c6c6cb;
+    font-family: "'Robot Medium'";
+    box-shadow: rgb(0 0 0 / 17%) 0px -23px 25px 0px inset, rgb(0 0 0 / 15%) 0px -36px 30px 0px inset, rgb(0 0 0 / 10%) 0px -79px 40px 0px inset, rgb(0 0 0 / 6%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px, rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px, rgb(0 0 0 / 9%) 0px 32px 16px;
+}
+
+form:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: 0.3s ease-in all;
+}
+
+form input {
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+form .btn-bar {
+    position: relative;
+    right: 20px;
+    border: none;
+    background: transparent;
+}
+
+form img {
+    width: 25px;
+}
+
+.mainSection {
+    padding: 150px;
+    background-image: url(../images/future3.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mainSection .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 25px;
+}
+
+.mainSection .row .col {
+    flex-basis: 50%;
+}
+
+.mainSection .row .col:last-child {
+    margin-left: 150px;
+    color: white;
+    font-family: "Robot Light";
+}
+
+.mainSection .row .col:last-child h1 {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mainSection .row .col:last-child h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    padding: 7px;
+    margin: 10px;
+    border: 1px solid #00fff2;
+    background: #23c5bd;
+    color: white;
+    font-size: 23px;
+    font-family: "Robot Bold";
+    box-shadow: 0 3px 15px #00fff2;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    box-shadow: 0 5px 25px #70dfda;
+    transition: 0.3s linear;
+}
+
+.read-more-2nd {
+    padding: 7px;
+    margin: 10px;
+    border: 1px solid #00fff2;
+    background: #23c5bd;
+    color: white;
+    font-size: 23px;
+    font-family: "Robot Bold";
+    box-shadow: 0 3px 15px #00fff2;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
+
+.read-more-2nd:hover {
+    box-shadow: 0 5px 25px #70dfda;
+    transition: 0.3s linear;
+}
+
+.spinner {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+}
+
+.spinner span {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.spinner span:nth-child(1) {
+    background: #216AD6;
+    animation-delay: -1.5s;
+}
+
+.spinner span:nth-child(2) {
+    background: #FFD960;
+    animation-delay: -1s;
+}
+
+.spinner span:nth-child(3) {
+    background: #D7415D;
+    animation-delay: -0.5s;
+}
+
+.spinner span:nth-child(4) {
+    background: #1F95F2;
+}
+
+.round {
+    position: absolute;
+    font-size: 55px;
+    color: rgb(62, 191, 255);
+    font-family: "Robot Bold";
+    top: 60%;
+    left: 15%;
+}
+
+.round span {
+    animation: rotate 3s ease-in-out infinite;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    top: 70%;
+    transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.round span:nth-child(1) {
+    animation-delay: -1s;
+}
+
+.round span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.greetings {
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    font-size: 55px;
+    font-family: "Robot Bold";
+    color: rgb(62, 191, 255);
+}
+
+.greetings span {
+    animation: circle 2s linear infinite;
+    margin: 0;
+    padding: 3px;
+    position: absolute;
+    top: 70%;
+    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-delay: -1s;
+}
+
+.spinner-2 {
+    position: absolute;
+    top: 130%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+}
+
+.spinner-2 span {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spinner 2s ease infinite;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.spinner-2 span:nth-child(1) {
+    background: #00ff2f;
+    animation-delay: -2s;
+}
+
+.spinner-2 span:nth-child(2) {
+    background: #882111;
+    animation-delay: -1s;
+}
+
+.spinner-2 span:nth-child(3) {
+    background: #5964ff;
+    animation-delay: -0.5s;
+}
+
+.spinner-2 span:nth-child(4) {
+    background: #f200ff;
+    animation-delay: 0.5s;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate(0) scale(0);
+    }
+    25% {
+        transform: translate(200%) scale(1.5);
+    }
+    50% {
+        transform: translate(200%, 200%) scale(0);
+    }
+    75% {
+        transform: translate(0, 200%) scale(1.5);
+    }
+    100% {
+        transform: translate(0) scale(0);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(0) scale(0);
+    }
+    25% {
+        transform: translate(-100%) scale(1)rotate(180deg);
+    }
+    50% {
+        transform: translate(-150%) scale(1);
+    }
+    75% {
+        transform: translate(-50%) scale(1);
+    }
+    100% {
+        transform: translate(-100%) scale(0) rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(0) scale(0);
+    }
+    25% {
+        transform: translate(200%) scale(1);
+    }
+    50% {
+        transform: translate(-100%) scale(1);
+    }
+    75% {
+        transform: translate(-50%)scale(1);
+    }
+    100% {
+        transform: translate(0) scale(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(0) scale(0);
+    }
+    25% {
+        transform: translate(200%) scale(1.5);
+    }
+    50% {
+        transform: translate(200%, 200%) scale(0);
+    }
+    75% {
+        transform: translate(0, 200%) scale(1.5);
+    }
+    100% {
+        transform: translate(0) scale(0);
+    }
+}
+
+@media only screen and (max-width:650px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    header ul li {
+        margin: 10px;
+    }
+    .mainSection {
+        padding: 0;
+        margin: 0;
+        background-image: linear-gradient(rgb(241, 241, 241), rgb(78, 178, 232));
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .mainSection .row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .mainSection .row .col {
+        flex-basis: 50%;
+    }
+    .spinner {
+        opacity: 0;
+    }
+    .spinner-2 {
+        opacity: 0;
+    }
+    .round {
+        position: absolute;
+        left: 50%;
+        top: 90%;
+    }
+    .greetings {
+        position: absolute;
+        left: 50%;
+        top: 120%;
+    }
+    .mainSection .row .col:last-child {
+        position: absolute;
+        color: black;
+        right: 20%;
+        top: 150%;
+    }
+}
+
+@media only screen and (min-width:651px) and (max-width:1000px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    header ul li {
+        margin: 10px;
+    }
+    .mainSection {
+        padding: 0;
+        margin: 0;
+    }
+    .mainSection .row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .spinner {
+        opacity: 0;
+    }
+    .spinner-2 {
+        opacity: 0;
+    }
+    .round {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+    }
+    .greetings {
+        position: absolute;
+        left: 50%;
+        top: 85%;
+    }
+    .mainSection .row .col:last-child {
+        position: absolute;
+        color: black;
+        right: 20%;
+        top: 120%;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1600px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    header ul li {
+        margin: 10px;
+    }
+    .mainSection {
+        padding: 150px;
+    }
+    .mainSection .row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .mainSection .row .col:last-child {
+        margin-left: 250px;
+    }
+    .spinner {
+        opacity: 1;
+    }
+    .spinner-2 {
+        opacity: 1;
+    }
+    .spinner {
+        position: absolute;
+        top: 60%;
+        left: 15%;
+        width: 200px;
+        height: 200px;
+    }
+    .round {
+        position: absolute;
+        font-size: 55px;
+        color: rgb(62, 191, 255);
+        font-family: "Robot Bold";
+        top: 150%;
+        left: 15%;
+    }
+    .greetings {
+        position: absolute;
+        top: 200%;
+        left: 25%;
+        font-size: 55px;
+        font-family: "Robot Bold";
+        color: rgb(62, 191, 255);
+    }
+    .spinner-2 {
+        position: absolute;
+        top: 270%;
+        left: 15%;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width:1920px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    header ul li {
+        margin: 10px;
+    }
+    .mainSection {
+        padding: 150px;
+    }
+    .mainSection .row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .spinner {
+        opacity: 1;
+    }
+    .spinner-2 {
+        opacity: 1;
+    }
+    .spinner {
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        width: 200px;
+        height: 200px;
+    }
+    .round {
+        position: absolute;
+        font-size: 55px;
+        color: rgb(62, 191, 255);
+        font-family: "Robot Bold";
+        top: 60%;
+        left: 15%;
+    }
+    .greetings {
+        position: absolute;
+        top: 90%;
+        left: 25%;
+        font-size: 55px;
+        font-family: "Robot Bold";
+        color: rgb(62, 191, 255);
+    }
+    .spinner-2 {
+        position: absolute;
+        top: 130%;
+        left: 15%;
+        width: 200px;
+        height: 200px;
+    }
+}

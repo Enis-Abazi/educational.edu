@@ -1,0 +1,327 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: "Robot Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Robot Medium";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Robot Black";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Robot Italic";
+    src: url(../fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Robot Thin";
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+.left-nav {
+    height: 100vh;
+    position: fixed;
+    width: 300px;
+    overflow-y: scroll;
+    float: left;
+    background-color: rgb(247, 107, 182);
+    text-align: center;
+}
+
+.left-nav img {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(249, 199, 107);
+    border-radius: 50%;
+}
+
+.left-nav ul {
+    display: block;
+    text-align: center;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.left-nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: "Robot Italic";
+    border: 1px solid transparent;
+    color: white;
+}
+
+.left-nav ul i {
+    font-size: 30px;
+    color: rgb(255, 204, 0);
+    margin: 10px;
+}
+
+.left-nav ul li:hover {
+    background: rgb(41, 39, 39);
+    color: rgb(235, 235, 235);
+    transition: 0.2s all linear;
+}
+
+.right-nav {
+    margin-left: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: rgb(247, 107, 182);
+}
+
+.right-nav select {
+    float: right;
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-family: "Robot Thin";
+    color: black;
+    border: 2px solid black;
+}
+
+.right-nav input {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Robot Thin:";
+    font-size: 20px;
+    color: black;
+    background: #f3f3fa;
+}
+
+.right-nav .colored-nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 200px;
+    padding: 10px;
+    font-size: 25px;
+    font-family: "Robot Italic";
+    color: white;
+}
+
+.right-nav .colored-nav li {
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.right-nav .colored-nav li:hover {
+    color: rgb(156, 255, 156);
+    transition: 0.4s all linear;
+    border-bottom: 2px solid rgb(156, 255, 156);
+}
+
+.nav {
+    width: 300px;
+    background: #f2eef9;
+    margin: 40px auto;
+}
+
+.profile {
+    padding: 30px;
+    background: rgb(247, 107, 182);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: "Robot Italic";
+}
+
+.profile:after {
+    content: " +";
+    float: right;
+    right: 10%;
+}
+
+.slide {
+    clear: both;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: end;
+    transition: height .4s ease;
+}
+
+.slide li {
+    padding: 30px;
+}
+
+.slide li a {
+    color: rgb(247, 107, 182);
+    font-size: 20px;
+    font-family: "Robot Italic";
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+
+#touch:checked+.slide {
+    height: 350px;
+}
+
+.mainSection {
+    padding-top: 50px;
+    padding-left: 450px;
+    padding-right: 300px;
+}
+
+.switch {
+    position: absolute;
+    left: 55%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.switch:nth-child(2) {
+    top: 45%;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Robot Italic";
+}
+
+.switch:nth-child(3) {
+    top: 55%;
+}
+
+.switch:nth-child(4) {
+    top: 65%;
+}
+
+.switch:nth-child(5) {
+    top: 75%;
+}
+
+.switch:nth-child(6) {
+    top: 85%;
+}
+
+input[type=checkbox] {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background-color: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: inset 0 0 0 5px rgba(0, 0, 0, .2);
+}
+
+input:checked[type=checkbox] {
+    background-color: #039af4;
+}
+
+input[type=checkbox]:before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: .5s linear;
+    transform: scale(1, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+input:checked[type=checkbox]:before {
+    left: 40px;
+}
+
+@media only screen and (max-width:1000px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .left-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        position: static;
+        overflow-y: scroll;
+    }
+    .right-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .right-nav input {
+        text-align: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .right-nav select {
+        margin-top: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .switch {
+        top: 155%;
+        left: 50%;
+    }
+    .switch:nth-child(2) {
+        top: 165%;
+        left: 50%;
+    }
+    .switch:nth-child(3) {
+        top: 175%;
+        left: 50%;
+    }
+    .switch:nth-child(4) {
+        top: 185%;
+        left: 50%;
+    }
+    .switch:nth-child(5) {
+        top: 195%;
+        left: 50%;
+    }
+    .switch:nth-child(6) {
+        top: 205%;
+        left: 50%;
+    }
+}

@@ -1,0 +1,183 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Arial";
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url(../fonts/ArialTh.ttf);
+}
+
+.left-col ul {
+    list-style: none;
+    color: white;
+    font-size: 25px;
+}
+
+.left-col ul li {
+    margin: 10px;
+    column-gap: 20px;
+}
+
+body {
+    background: #f3f3fa;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.row .left-col {
+    flex-basis: 30%;
+    background-color: rgb(7, 37, 46);
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.left-col h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-left: 33%;
+    margin-right: 33%;
+    color: white;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left-col h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.blue {
+    color: rgb(12, 129, 255);
+    font-size: 25px;
+}
+
+.left-col h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+.left-col h2 {
+    font-size: 30px;
+}
+
+.left-col h3 {
+    font-size: 26px;
+    color: white;
+}
+
+.left-col h4 {
+    font-size: 23px;
+    color: white;
+}
+
+.left-col h5 {
+    font-size: 21px;
+    color: white;
+}
+
+img {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.row .right-col {
+    flex-basis: 70%;
+    padding: 50px;
+    color: black;
+    margin: 10px;
+}
+
+.right-col h1 {
+    font-size: 40px;
+}
+
+.right-col h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+}
+
+.flex {
+    text-align: start;
+    padding: 10px;
+    margin: 10px;
+}
+
+.center {
+    text-align: start;
+    align-items: center;
+}
+
+.center progress {
+    font-size: 50px;
+}
+
+.center h3 {
+    font-size: 40px;
+}
+
+.center h4 {
+    font-size: 33px;
+}
+
+@media only screen and (min-width:1200px) and (max-width:1920) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .left-col {
+        flex-basis: 30%;
+    }
+    .left-col ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .left-col ul li {
+        margin: 10px;
+    }
+    .left-col {
+        height: 200vh;
+        overflow: hidden;
+    }
+    .right-col {
+        overflow: hidden;
+    }
+}
